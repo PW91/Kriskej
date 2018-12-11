@@ -1,0 +1,231 @@
+// font stacks
+$sans-serif:    "Helvetica Neue", Helvetica, Arial, sans-serif;
+$serif:         "Georgia", Cambria, Times New Roman, Times, serif;
+
+$lato:          "Lato", $sans-serif;
+$roboto:        "Roboto", $sans-serif;
+$minion:        "Minion Pro", $serif;
+$source:        "Source Sans Pro", $serif;
+
+// font weights
+$light:          300;
+$regular:        400;
+$medium:         500;
+$bold:           700;
+$heavy:          900;
+
+:root {
+  font-family: $source;
+}
+
+
+////////////////////
+// SIZES - MOBILE //
+////////////////////
+
+$singularity-mobile  : pxToRem(53); // hero title
+$huge-mobile         : pxToRem(25); // h2
+$big-mobile          : pxToRem(19); // h3
+$medium-mobile       : pxToRem(16); // h4
+$normal-mobile       : pxToRem(15); // default p
+$lesser-mobile       : pxToRem(12); // default p
+$small-mobile        : pxToRem(14); // video info
+
+////////////////////
+// SIZES - TABLET //
+////////////////////
+
+$singularity-tablet  : pxToRem(52);
+$huge-tablet         : pxToRem(30);
+$big-tablet          : pxToRem(22);
+$medium-tablet       : pxToRem(20);
+$normal-tablet       : pxToRem(16);
+$lesser-tablet       : pxToRem(14);
+$small-tablet        : pxToRem(14);
+
+//////////////////////
+// SIZES - DESKTOP  //
+//////////////////////
+
+$singularity-desktop : pxToRem(76);
+$huge-desktop        : pxToRem(40);
+$big-desktop         : pxToRem(24);
+$medium-desktop      : pxToRem(19);
+$normal-desktop      : pxToRem(17);
+$lesser-desktop      : pxToRem(15);
+$small-desktop       : pxToRem(14);
+
+///////////////////
+// SIZES - WIDE  //
+///////////////////
+
+$singularity-wide    : pxToRem(100);
+$huge-wide           : pxToRem(48);
+$big-wide            : pxToRem(26);
+$medium-wide         : pxToRem(22);
+$normal-wide         : pxToRem(18);
+$lesser-wide         : pxToRem(16);
+$small-wide          : pxToRem(14);
+
+.f-size-singularity {
+  font-size: $singularity-mobile;
+  @media screen and (min-width:$breakpoint-tablet){
+    font-size : $singularity-tablet;
+  }
+  @media screen and (min-width:$breakpoint-desktop){
+    font-size : $singularity-desktop;
+  }
+  @media screen and (min-width:$breakpoint-wide){
+    font-size : $singularity-wide;
+  }
+}
+
+.f-size-huge {
+  font-size: $huge-mobile;
+  @media screen and (min-width:$breakpoint-tablet){
+    font-size : $huge-tablet;
+  }
+  @media screen and (min-width:$breakpoint-desktop){
+    font-size : $huge-desktop;
+  }
+  @media screen and (min-width:$breakpoint-wide){
+    font-size : $huge-wide;
+  }
+}
+
+.f-size-big {
+  font-size: $big-mobile;
+  @media screen and (min-width:$breakpoint-tablet){
+    font-size : $big-tablet;
+  }
+  @media screen and (min-width:$breakpoint-desktop){
+    font-size : $big-desktop;
+  }
+  @media screen and (min-width:$breakpoint-wide){
+    font-size : $big-wide;
+  }
+}
+
+.f-size-medium {
+  font-size: $medium-mobile;
+  @media screen and (min-width:$breakpoint-tablet){
+    font-size : $medium-tablet;
+  }
+  @media screen and (min-width:$breakpoint-desktop){
+    font-size : $medium-desktop;
+  }
+  @media screen and (min-width:$breakpoint-wide){
+    font-size : $medium-wide;
+  }
+}
+
+.f-size-normal {
+  font-size: $normal-mobile;
+  @media screen and (min-width:$breakpoint-tablet){
+    font-size : $normal-tablet;
+  }
+  @media screen and (min-width:$breakpoint-desktop){
+    font-size : $normal-desktop;
+  }
+  @media screen and (min-width:$breakpoint-wide){
+    font-size : $normal-wide;
+  }
+}
+
+
+.f-size-lesser {
+  font-size: $lesser-mobile;
+  @media screen and (min-width:$breakpoint-tablet){
+    font-size : $lesser-tablet;
+  }
+  @media screen and (min-width:$breakpoint-desktop){
+    font-size : $lesser-desktop;
+  }
+  @media screen and (min-width:$breakpoint-wide){
+    font-size : $lesser-wide;
+  }
+}
+
+.f-size-small {
+  font-size: $small-mobile;
+  @media screen and (min-width:$breakpoint-tablet){
+    font-size : $small-tablet;
+  }
+  @media screen and (min-width:$breakpoint-desktop){
+    font-size : $small-desktop;
+  }
+  @media screen and (min-width:$breakpoint-wide){
+    font-size : $small-wide;
+  }
+}
+
+
+
+/******************************************************************
+H1, H2, H3, H4, H5 STYLES
+******************************************************************/
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
+  text-rendering: optimizelegibility;
+  font-weight: 400;
+
+  /* removing text decoration from all headline links */
+  a {
+    text-decoration: none;
+  }
+}
+
+
+h1, .h1 {
+  @extend .f-size-singularity;
+  line-height: 1em;
+  margin: 0.60em 0;
+}
+
+h2, .h2 {
+  @extend .f-size-huge;
+  line-height: 1.3em;
+  margin-bottom: 1em;
+  
+}
+
+h3, .h3 {
+  @extend .f-size-big;
+  line-height: 1.3em;
+}
+
+h4, .h4 {
+  @extend .f-size-medium;
+  // font-weight: 700;
+}
+
+h5, .h5 {
+  @extend .f-size-normal;
+  // font-weight: 700;
+}
+
+/************
+COPY
+So the paragraphs are WAAAY more readible
+only applies to paragraphs within WRAP
+*************/
+
+p,.p{
+
+  @extend .f-size-normal;
+
+  -ms-word-wrap: break-word;
+  word-break: break-word; //non-standart css for webkit
+  word-wrap: break-word;
+  // cleaning up the ragged lines and breaks
+  -webkit-hyphens: none;
+     -moz-hyphens: none;
+          hyphens: none;
+  // sets a minimum number of characters before and after the break
+  -webkit-hyphenate-before: 2;
+   -webkit-hyphenate-after: 3;
+           hyphenate-lines: 3;
+
+  text-rendering:geometricPrecision;
+ 
+}
